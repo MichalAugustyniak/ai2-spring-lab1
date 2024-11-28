@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of people</title>
+</head>
+<body>
+    <h1>People</h1>
+    <ul>
+        <li th:each="person : ${people}">
+            <span th:text="${person.getFirstName()}">First name</span> -
+            <span th:text="${person.getFamilyName()}">Family name</span>
+        </li>
+    </ul>
+</body>
+</html>

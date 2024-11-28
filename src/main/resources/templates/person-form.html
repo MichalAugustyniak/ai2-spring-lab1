@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Add person form</title>
+</head>
+<body>
+<h1>Add new person</h1>
+
+<form th:action="@{/people/save}" th:object="${person}" method="post">
+    <label for="firstName">First name:</label>
+    <input type="text" id="firstName" th:field="*{firstName}" placeholder="Enter the first name" required /><br/>
+
+    <label for="familyName">Family name:</label>
+    <input type="text" id="familyName" th:field="*{familyName}" placeholder="Enter the family name" required /><br/>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
